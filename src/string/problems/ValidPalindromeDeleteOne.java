@@ -1,4 +1,4 @@
-//Valid Palindrome II
+// 891 Valid Palindrome II
 //        描述
 //        Given a non-empty string s, you may delete at most one character. Judge whether you can make it a palindrome.
 //
@@ -35,12 +35,17 @@ public class ValidPalindromeDeleteOne {
     }
 
     public static boolean validPalindrome(String s) {
+        // check if the string is originally a Palindrome
         if(isPalindrome(s)) return true;
+
+        // find the first diff pair
         Pair diff = findTheDiff(s);
+
+        // check two possible deletions to see whether
+        // they would generate a valid Palindrome
         if(diff.left == diff.right) return true;
         else{
             return isPalindrome(s.substring(diff.left+1,diff.right+1)) || isPalindrome(s.substring(diff.left,diff.right));
-
         }
     }
 
@@ -55,23 +60,19 @@ public class ValidPalindromeDeleteOne {
             left++;
             right--;
         }
-        return new Pair(0, 0);
+        return new Pair(0,0);
     }
 
     public static boolean isPalindrome(String s) {
-        if(s.equals("")) return true;
-        if(s.length()==1) return true;
+        if(s.length() <= 1) return true;
+
         int left = 0;
         int right = s.length()-1;
 
         while(left < right) {
-            if(s.charAt(left) != s.charAt(right)) return false;
-            left++;
-            right--;
+            if(s.charAt(left++) != s.charAt(right--)) return false;
         }
         return true;
-
-
     }
 
     public static void main(String[] args) {
