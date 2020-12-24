@@ -20,14 +20,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class TwoSumClass {
-    /**
-     * @param number: An integer
-     * @return: nothing
-     */
-    /**
-     * @param number: An integer
-     * @return: nothing
-     */
+
     private static Map<Integer, Integer> data = new HashMap<>();
     public void add(int number) {
         if(data.containsKey(number)) {
