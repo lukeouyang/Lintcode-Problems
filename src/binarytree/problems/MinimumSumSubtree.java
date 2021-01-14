@@ -30,7 +30,7 @@ There is one and only one subtree in the tree. So we return 1.
 LintCode will print the subtree which root is your return node.
 It's guaranteed that there is only one subtree with minimum sum and the given binary tree is not an empty tree.
  */
-package binarysearchtree.problems;
+package binarytree.problems;
 
 public class MinimumSumSubtree {
     public static class TreeNode {

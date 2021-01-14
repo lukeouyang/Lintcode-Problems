@@ -30,7 +30,7 @@ Binary tree {3,2,4,1},  denote the following structure:
 Given target value is a floating point.
 You are guaranteed to have only one unique value in the BST that is closest to the target.
  */
-package binarysearchtree.problems;
+package binarytree.problems;
 
 public class ClosestBinarySearchTreeValue {
     static class TreeNode {
